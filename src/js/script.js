@@ -63,7 +63,7 @@ const androidSelector =function (){
 //creamos función de comparar
 const compare = function(){
   //selección celdas que muestran resultado (checkbox>select)  
-    const compareSlot = document.querySelectorAll(`checkbox${line} > td`)
+    const compareSlot = document.querySelectorAll(`.checkbox${line -1} > div`)
    //comparación colorUser(colores elegidos por el jugador) con ramdomColors (combinación elegida aleatoriamente) 
     let test1 = ColorUser.map(function(e){
         return randomColors.indexOf(e)
@@ -80,6 +80,8 @@ const compare = function(){
 compareSlot.forEach(function(element, index){
     element.classList.add(test2[index])
 })
+
+ColorUser =[]
 
 }
 
