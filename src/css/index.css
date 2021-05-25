@@ -1,0 +1,130 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 900;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+body{
+    background: #F4B266  
+}
+
+.full{
+    display: flex;
+    justify-content: center;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+
+section{
+    display: flex;
+}
+
+.result{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section div{
+    border: 1px solid transparent;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.mainSelector{
+    width: 27%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+}
+
+.select{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+[class^="row"]{
+    margin: 1rem 0;
+    height: 5.2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+} 
+[class^="checkbox"]{
+    height: 5.2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+} 
+[class^="checkbox"] div{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+
+.red{
+    background-color: red;
+
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow
+}
+.blue{
+
+    background-color: blue
+}
+.orange{
+
+    background-color: orange
+}
+.pink{
+    background-color: pink;
+}
+
+.black{
+    background-color: black;
+}
+.grey{
+    background-color: grey;
+}
+.white{
+    background-color: whitesmoke;
+}
+
+.btn{
+    border: none;
+    padding: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+}

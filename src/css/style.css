@@ -1,3 +1,6 @@
+
+
+
 main{
     display: flex;
     gap: 2rem;
@@ -27,6 +30,8 @@ section div{
     height: 50px;
 }
 
+
+
 .red{
     background-color: red;
 
@@ -53,12 +58,6 @@ section div{
     background-color: pink;
 }
 
-.checkbox {
-    display: flex;
-    background-color: rgb(31, 216, 216);
-    width: 500px;
-}
-
 .black{
     background-color: black;
 }
@@ -68,3 +67,4 @@ section div{
 .white{
     background-color: whitesmoke;
 }
+

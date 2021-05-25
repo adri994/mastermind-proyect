@@ -14,7 +14,7 @@ const select = document.querySelectorAll(".select")
 
 // function that "paints" each cell, inside their line.
 const paint = function(event){
-    
+
     //if (true), we select each class slot (that equals to each cell of the table). With each slot being a child of each row(with line position). This will return an array.
     // Then slot[cell position] adds a class to the event.target (returns HTML tag that was clicked), and adds the second class form tag. Then we increase cell by 1. 
 
@@ -23,7 +23,7 @@ const paint = function(event){
 
         ColorUser.push(event.target.classList[1])
     
-        slots[cell].classList.add(event.target.classList[1])
+        slots[cell].classList.replace("white",event.target.classList[1])
         cell++;
     
         // if every cell is completed, we jump to the next line
@@ -62,8 +62,10 @@ const androidSelector =function (){
 }
 //creamos función de comparar
 const compare = function(){
+    console.log("hola")
   //selección celdas que muestran resultado (checkbox>select)  
     const compareSlot = document.querySelectorAll(`.checkbox${line -1} > div`)
+    console.log(compareSlot)
    //comparación colorUser(colores elegidos por el jugador) con ramdomColors (combinación elegida aleatoriamente) 
     let test1 = ColorUser.map(function(e){
         return randomColors.indexOf(e)
@@ -78,7 +80,7 @@ const compare = function(){
     })
     
 compareSlot.forEach(function(element, index){
-    element.classList.add(test2[index])
+    element.classList.replace("white",test2[index])
 })
 
 ColorUser =[]
