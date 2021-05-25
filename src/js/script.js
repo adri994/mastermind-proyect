@@ -4,7 +4,11 @@ let ColorUser = []
 
 const check = document.querySelector('#check')
 const select = document.querySelectorAll('.select')
-const resetRound = document.querySelector('.reset-game')
+
+const resetRound = document.querySelector('#restart')
+
+const exitButton = document.querySelector('#exit-button')
+
 // We define 2 variable
 // Cell indicates the value of the first position, within the first try.
 let cell = 0
@@ -57,6 +61,7 @@ const androidSelector = function () {
   })
 }
 // We create a function that comapres //checkbox area
+
 const compare = function () {
   // selección celdas que muestran resultado (checkbox>select)
   const compareSlot = document.querySelectorAll(`.checkbox${line - 1} > div`)
@@ -79,7 +84,7 @@ const compare = function () {
   const hasWon = test2.every(function (item) {
     return item === 'black'
   })
-
+ 
   if (hasWon) {
     resetGame()
   }
@@ -90,6 +95,11 @@ const compare = function () {
   select.forEach(function (button) {
     button.addEventListener('click', paint)
   })
+
+  if (hasWon === true) {
+    const appear = document.querySelector('.modal')
+    appear.classList.add('appear')
+  }
 }
 
 function resetGame () {
@@ -110,6 +120,11 @@ function resetGame () {
 
 select.forEach(function (element) {
   element.addEventListener('click', paint)
+})
+
+exitButton.addEventListener('click', function () {
+  const appear = document.getElementById('modal1')
+  appear.classList.remove('appear')
 })
 
 check.addEventListener('click', compare)
