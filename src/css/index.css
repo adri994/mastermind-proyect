@@ -12,13 +12,13 @@ h1{
 }
 
 body{
-    background: #F4B266  
+    background: #F4B266
 }
 
 .full{
     display: flex;
     justify-content: center;
-    
+
 }
 
 main{
@@ -73,14 +73,14 @@ section div{
     align-items: center;
     gap: .5rem;
 
-} 
+}
 [class^="checkbox"]{
     height: 5.2rem;
     display: flex;
     align-items: center;
     gap: .5rem;
 
-} 
+}
 [class^="checkbox"] div{
     height: 1.5rem;
     width: 1.5rem;
@@ -127,4 +127,10 @@ section div{
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+.reset-game {
+    background-color: cyan;
+    border: 2px solid black;
+    border-radius: 20px;
 }

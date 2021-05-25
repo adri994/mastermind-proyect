@@ -1,4 +1,8 @@
-
+#restart {
+    color: cyan;
+    border: 2px solid black;
+    border-radius: 20px;
+}
 
 
 main{
@@ -66,4 +70,3 @@ section div{
 .white{
     background-color: whitesmoke;
 }
-

@@ -4,7 +4,7 @@ let ColorUser = []
 
 const check = document.querySelector('#check')
 const select = document.querySelectorAll('.select')
-
+const resetRound = document.querySelector('.reset-game')
 // We define 2 variable
 // Cell indicates the value of the first position, within the first try.
 let cell = 0
@@ -114,4 +114,5 @@ select.forEach(function (element) {
 })
 
 check.addEventListener('click', compare)
+resetRound.addEventListener('click', resetGame)
 androidSelector()
