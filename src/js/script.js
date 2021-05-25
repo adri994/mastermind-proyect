@@ -4,7 +4,7 @@ let ColorUser = []
 
 const check = document.querySelector('#check')
 const select = document.querySelectorAll('.select')
-
+const resetRound = document.querySelector('.reset-game')
 // We define 2 variable
 // Cell indicates the value of the first position, within the first try.
 let cell = 0
@@ -21,7 +21,7 @@ const paint = function (event) {
 
     ColorUser.push(event.target.classList[1])
 
-    slots[cell].classList.replace("white",event.target.classList[1])
+    slots[cell].classList.replace('white', event.target.classList[1])
     cell++
 
     // if every cell is completed, we jump to the next line
@@ -35,11 +35,8 @@ const paint = function (event) {
       })
     }
   } else {
-    // we asign value 1 to line. we select each element with class slot, and for each one of them, we remove the class applied, in the second position
-    line = 1
-    document.querySelectorAll('.slot').forEach(function (choice) {
-      choice.classList.remove(choice.classList[1])
-    })
+    resetGame()
+    window.alert('You have lost mate, maybe another round?')
   }
 }
 
@@ -75,10 +72,17 @@ const compare = function () {
       return 'black'
     } return 'grey'
   })
-
   compareSlot.forEach(function (element, index) {
-    element.classList.replace("white",test2[index])
+    element.classList.replace('white', test2[index])
   })
+
+  const hasWon = test2.every(function (item) {
+    return item === 'black'
+  })
+
+  if (hasWon) {
+    resetGame()
+  }
 
   ColorUser = []
 
@@ -88,6 +92,20 @@ const compare = function () {
   })
 }
 
+function resetGame () {
+  const slots = document.querySelectorAll('.slot')
+  const checkbox = document.querySelectorAll('.result div ')
+  setTimeout(function () {
+    line = 1
+    ColorUser = []
+    cell = 0
+  }, 1000)
+  for (let i = 0; i < slots.length; i++) {
+    slots[i].classList.replace(slots[i].classList[1], 'white')
+    checkbox[i].classList.replace(checkbox[i].classList[0], 'white')
+  }
+}
+
 // for each time we click an element with class select, we apply the function paint
 
 select.forEach(function (element) {
@@ -95,5 +113,5 @@ select.forEach(function (element) {
 })
 
 check.addEventListener('click', compare)
-
+resetRound.addEventListener('click', resetGame)
 androidSelector()

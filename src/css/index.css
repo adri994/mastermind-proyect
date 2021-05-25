@@ -16,7 +16,7 @@ h1{
 body{
     background: #F4B266;
     font-family: 'Press Start 2P', cursive;
-    background-color: #cfd3d6;
+
 }
 
 .full{
@@ -24,6 +24,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 10rem;
+
 }
 
 main{
@@ -100,14 +101,14 @@ z-index: 1;
     gap: .8rem;
     
 
-} 
+}
 [class^="checkbox"]{
     height: 5.2rem;
     display: flex;
     align-items: center;
     gap: .5rem;
 
-} 
+}
 [class^="checkbox"] div{
     height: 1.5rem;
     width: 1.5rem;
@@ -156,10 +157,18 @@ z-index: 1;
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
-    width: 9rem;
+    width: 11rem;
     height: 5rem;
 }
 
 .androidSelector{
     display: none;
+}
+
+.group-btn{
+    width: 100%;
+}
+
+.reset-game {
+    background-color: cyan;
 }
