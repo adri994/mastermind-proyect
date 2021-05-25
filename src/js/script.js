@@ -93,18 +93,17 @@ const compare = function () {
 }
 
 function resetGame () {
+  const slots = document.querySelectorAll('.slot')
+  const checkbox = document.querySelectorAll('.result div ')
   setTimeout(function () {
-    const slots = document.querySelectorAll('.slot')
-    const checkbox = document.querySelectorAll('.result div ')
     line = 1
     ColorUser = []
     cell = 0
-
-    for (let i = 0; i < slots.length; i++) {
-      slots[i].classList.replace(slots[i].classList[1], 'white')
-      checkbox[i].classList.replace(checkbox[i].classList[0], 'white')
-    }
-  }, 2500)
+  }, 1000)
+  for (let i = 0; i < slots.length; i++) {
+    slots[i].classList.replace(slots[i].classList[1], 'white')
+    checkbox[i].classList.replace(checkbox[i].classList[0], 'white')
+  }
 }
 
 // for each time we click an element with class select, we apply the function paint
