@@ -3,19 +3,17 @@ const randomColors = []
 let ColorUser = []
 
 const check = document.querySelector('#check')
-
-// This variable, calls every element with class "select"
 const select = document.querySelectorAll('.select')
 
-// We define 2 variable.
+// We define 2 variable
 // Cell indicates the value of the first position, within the first try.
 let cell = 0
-// Line indicates the try the users have done.
+// Line indicates the try the user is situated.
 let line = 1
 
-// function that "paints" each cell, inside their line.
+// function that "paints" each cell, inside within its line.
 const paint = function (event) {
-  // if (true), we select each class slot (that equals to each cell of the table). With each slot being a child of each row(with line position). This will return an array.
+// if (true), we select each class slot (that equals to each cell of the table). With each slot being a child of each row(with line position). This will return an array.
   // Then slot[cell position] adds a class to the event.target (returns HTML tag that was clicked), and adds the second class form tag. Then we increase cell by 1.
 
   if (line <= 12) {
@@ -39,32 +37,33 @@ const paint = function (event) {
   } else {
     // we asign value 1 to line. we select each element with class slot, and for each one of them, we remove the class applied, in the second position
     line = 1
-    document.querySelectorAll('.slot').forEach(function (td) {
-      td.classList.remove(td.classList[1])
+    document.querySelectorAll('.slot').forEach(function (choice) {
+      choice.classList.remove(choice.classList[1])
     })
   }
 }
-// Genera combinación aleatoria
+
+// Function that generates CPU's color selection //
 const androidSelector = function () {
   while (randomColors.length < 5) {
     const randomChoice = Math.floor(Math.random() * (COLORLIST.length))
-    // este if evita repetición de colores aleatorios en clave generada aleatoriamente
+    // this if avoids repetition of colors
     if (!randomColors.includes(COLORLIST[randomChoice])) {
       randomColors.push(COLORLIST[randomChoice])
     }
   }
-  // selección celdas de combinación aleatoria
+  // selects each cell/slot of random combination inside the document
   const androidSlot = document.querySelectorAll('.androidSelector>.select')
-  // añadir clase aleatorio a cada celda
+  // adds random class to each cell
   androidSlot.forEach(function (element, i) {
     element.classList.add(randomColors[i])
   })
 }
-// creamos función de comparar
+// We create a function that comapres //checkbox area
 const compare = function () {
   // selección celdas que muestran resultado (checkbox>select)
   const compareSlot = document.querySelectorAll(`.checkbox${line - 1} > div`)
-  // comparación colorUser(colores elegidos por el jugador) con ramdomColors (combinación elegida aleatoriamente)
+  // comparación colorUser(colores elegidos por el jugador) con randomColors (combinación elegida aleatoriamente)
   const test1 = ColorUser.map(function (e) {
     return randomColors.indexOf(e)
   })
@@ -82,6 +81,11 @@ const compare = function () {
   })
 
   ColorUser = []
+
+  check.disabled = true
+  select.forEach(function (button) {
+    button.addEventListener('click', paint)
+  })
 }
 
 // for each time we click an element with class select, we apply the function paint
