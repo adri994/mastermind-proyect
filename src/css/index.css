@@ -128,3 +128,59 @@ section div{
     text-transform: uppercase;
     font-weight: 900;
 }
+
+.modal { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--black);
+  cursor: pointer;
+  transition: all 0.35s ease-in;
+  background-color: rgba(0, 0, 0, 0.500);
+ 
+  
+
+}
+
+.modal-dialog {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background: black;
+  overflow: auto;
+  cursor: default;
+  z-index: 100;
+  color: white;
+  padding: 100px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  border: 3px dotted; white;
+  
+}
+
+.appear {
+    display: flex;
+}
+
+#exit-button {
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background-color: rgb(145, 10, 10);
+    color: white;
+    border: 1px solid white;
+}
+
+#level-button {
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background-color: rgb(192, 192, 192);
+}

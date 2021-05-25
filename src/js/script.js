@@ -4,6 +4,7 @@ let ColorUser = []
 
 const check = document.querySelector('#check')
 const select = document.querySelectorAll('.select')
+const exitButton = document.querySelector('#exit-button')
 
 // We define 2 variable
 // Cell indicates the value of the first position, within the first try.
@@ -21,7 +22,7 @@ const paint = function (event) {
 
     ColorUser.push(event.target.classList[1])
 
-    slots[cell].classList.replace("white",event.target.classList[1])
+    slots[cell].classList.replace('white', event.target.classList[1])
     cell++
 
     // if every cell is completed, we jump to the next line
@@ -60,6 +61,7 @@ const androidSelector = function () {
   })
 }
 // We create a function that comapres //checkbox area
+
 const compare = function () {
   // selección celdas que muestran resultado (checkbox>select)
   const compareSlot = document.querySelectorAll(`.checkbox${line - 1} > div`)
@@ -77,7 +79,11 @@ const compare = function () {
   })
 
   compareSlot.forEach(function (element, index) {
-    element.classList.replace("white",test2[index])
+    element.classList.replace('white', test2[index])
+  })
+
+  const hasWon = test2.every(function (item) {
+    return item === 'black'
   })
 
   ColorUser = []
@@ -86,12 +92,22 @@ const compare = function () {
   select.forEach(function (button) {
     button.addEventListener('click', paint)
   })
+
+  if (hasWon === true) {
+    const appear = document.querySelector('.modal')
+    appear.classList.add('appear')
+  }
 }
 
 // for each time we click an element with class select, we apply the function paint
 
 select.forEach(function (element) {
   element.addEventListener('click', paint)
+})
+
+exitButton.addEventListener('click', function () {
+  const appear = document.getElementById('modal1')
+  appear.classList.remove('appear')
 })
 
 check.addEventListener('click', compare)
