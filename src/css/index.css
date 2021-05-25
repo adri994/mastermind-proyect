@@ -7,18 +7,23 @@ h1{
     text-align: center;
     text-transform: uppercase;
     font-size: 900;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: .2rem;
+
+ 
 }
 
 body{
-    background: #F4B266  
+    background: #F4B266;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #cfd3d6;
 }
 
 .full{
+    width: 90%;
     display: flex;
     justify-content: center;
-    
+    gap: 10rem;
 }
 
 main{
@@ -28,6 +33,13 @@ main{
     padding: 3rem;
     border: 1px solid black;
     border-radius: 2rem;
+    background-color: #929597;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section{
@@ -50,14 +62,28 @@ section div{
 
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 30%;
+    height: auto;
+
+}
+
+.slot{
+    border-radius: 33px;
+background: linear-gradient(145deg, #cacaca46, #f0f0f025);
+box-shadow:  4px 4px 8px #b5b5b5,
+             -4px -4px 8px #ffffff;
+             position: relative;
+z-index: 1;
 }
 
 .mainSelector{
-    width: 27%;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 1rem;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .select{
@@ -71,7 +97,8 @@ section div{
     height: 5.2rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .8rem;
+    
 
 } 
 [class^="checkbox"]{
@@ -88,7 +115,8 @@ section div{
 
 
 .red{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.733);
+    
 
 }
 
@@ -122,9 +150,16 @@ section div{
 }
 
 .btn{
+    height: 2rem;
     border: none;
     padding: 1.5rem;
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
+    width: 9rem;
+    height: 5rem;
+}
+
+.androidSelector{
+    display: none;
 }

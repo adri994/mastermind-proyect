@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/index.css">
     <script defer src="./src/js/script.js"></script>
     <title>Mastermind</title>
 </head>
 <body>
-    <h1>Mastermind</h1>
+
     <div class="full">
+        <div class="title">
+            <h1>Mastermind</h1>
+        </div>
         <main>
             <div class="option">
                 <section class="row12">
@@ -185,18 +190,21 @@
                 </section>
             </div>
         </main>
+        <section class="container">
+            <div class="mainSelector">
+                <div class="select red" ></div>
+                <div class="select green" ></div>
+                <div class="select yellow" ></div>
+                <div class="select blue" ></div>
+                <div class="select orange" ></div>
+                <div class="select pink" ></div>
+            </div>
+            <button id="check" class="btn red">CHECK</button>
+        </section>
+        
     </div>
-    <section class="container">
-        <div class="mainSelector">
-            <div class="select red" ></div>
-            <div class="select green" ></div>
-            <div class="select yellow" ></div>
-            <div class="select blue" ></div>
-            <div class="select orange" ></div>
-            <div class="select pink" ></div>
-        </div>
-    </section>
-    <button id="check" class="btn red">CHECK</button>
+
+
     <div class="androidSelector">
         <div class="select" ></div>
         <div class="select" ></div>
