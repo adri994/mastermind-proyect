@@ -3,6 +3,10 @@ html {
     box-sizing: border-box;
 }
 
+img{
+    max-width: 100%;
+}
+
 h1{
     text-align: center;
     text-transform: uppercase;
@@ -75,9 +79,7 @@ section div{
 
 .slot{
     border-radius: 33px;
-    background: linear-gradient(145deg, #cacaca46, #f0f0f025);
-    box-shadow:  5px 5px 0px #a4a4a4,
-    -5px -5px 0px #ffffff;
+
 
 }
 
@@ -90,12 +92,6 @@ section div{
     margin-bottom: 1rem;
 }
 
-.select{
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-}
 [class^="row"]{
     margin: 1rem 0;
     height: 5.2rem;
@@ -118,41 +114,6 @@ section div{
 }
 
 
-.red{
-    background-color: rgba(255, 0, 0, 0.733);
-    
-
-}
-
-.green{
-    background-color: green;
-}
-
-.yellow{
-    background-color: yellow
-}
-.blue{
-
-    background-color: blue
-}
-.orange{
-
-    background-color: orange
-}
-.pink{
-    background-color: pink;
-}
-
-.black{
-    background-color: black;
-}
-.grey{
-    background-color: grey;
-}
-.white{
-    background-color: whitesmoke;
-}
-
 .btn{
     height: 2rem;
     border: none;
@@ -165,7 +126,7 @@ section div{
 }
 
 .androidSelector{
-    display: none;
+
 }
 
 .group-btn{
@@ -190,8 +151,16 @@ section div{
   transition: all 0.35s ease-in;
   background-color: rgba(0, 0, 0, 0.500);
  
-  
+}
 
+.white{
+    background-color: white;
+}
+.grey{
+    background-color: grey;
+}
+.black{
+    background-color: black;
 }
 
 .modal-dialog {
