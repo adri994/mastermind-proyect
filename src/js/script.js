@@ -4,6 +4,9 @@ let ColorUser = []
 
 const check = document.querySelector('#check')
 const select = document.querySelectorAll('.select')
+
+const resetRound = document.querySelector('#restart')
+
 const exitButton = document.querySelector('#exit-button')
 
 // We define 2 variable
@@ -36,11 +39,8 @@ const paint = function (event) {
       })
     }
   } else {
-    // we asign value 1 to line. we select each element with class slot, and for each one of them, we remove the class applied, in the second position
-    line = 1
-    document.querySelectorAll('.slot').forEach(function (choice) {
-      choice.classList.remove(choice.classList[1])
-    })
+    resetGame()
+    window.alert('You have lost mate, maybe another round?')
   }
 }
 
@@ -77,7 +77,6 @@ const compare = function () {
       return 'black'
     } return 'grey'
   })
-
   compareSlot.forEach(function (element, index) {
     element.classList.replace('white', test2[index])
   })
@@ -85,6 +84,10 @@ const compare = function () {
   const hasWon = test2.every(function (item) {
     return item === 'black'
   })
+
+  if (hasWon) {
+    resetGame()
+  }
 
   ColorUser = []
 
@@ -96,6 +99,20 @@ const compare = function () {
   if (hasWon === true) {
     const appear = document.querySelector('.modal')
     appear.classList.add('appear')
+  }
+}
+
+function resetGame () {
+  const slots = document.querySelectorAll('.slot')
+  const checkbox = document.querySelectorAll('.result div ')
+  setTimeout(function () {
+    line = 1
+    ColorUser = []
+    cell = 0
+  }, 1000)
+  for (let i = 0; i < slots.length; i++) {
+    slots[i].classList.replace(slots[i].classList[1], 'white')
+    checkbox[i].classList.replace(checkbox[i].classList[0], 'white')
   }
 }
 
@@ -111,5 +128,5 @@ exitButton.addEventListener('click', function () {
 })
 
 check.addEventListener('click', compare)
-
+resetRound.addEventListener('click', resetGame)
 androidSelector()

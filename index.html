@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/index.css">
     <script defer src="./src/js/script.js"></script>
     <title>Mastermind</title>
 </head>
 <body>
-    <h1>Mastermind</h1>
+
     <div class="full">
+        <div class="title">
+            <h1>Mastermind</h1>
+        </div>
         <main>
             <div class="option">
                 <section class="row12">
@@ -100,84 +104,84 @@
                 </section>
             </div>
             <div class="result">
-                <section class="checkbox12"> 
+                <section class="checkbox12">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox11"> 
+                <section class="checkbox11">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox10"> 
+                <section class="checkbox10">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox9"> 
+                <section class="checkbox9">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox8"> 
+                <section class="checkbox8">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox7"> 
+                <section class="checkbox7">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox6"> 
+                <section class="checkbox6">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox5"> 
+                <section class="checkbox5">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox4"> 
+                <section class="checkbox4">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox3"> 
+                <section class="checkbox3">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox2"> 
+                <section class="checkbox2">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
                 </section>
-                <section class="checkbox1"> 
+                <section class="checkbox1">
                     <div class="white"></div>
                     <div class="white"></div>
                     <div class="white"></div>
@@ -186,18 +190,22 @@
                 </section>
             </div>
         </main>
+        <section class="container">
+            <div class="mainSelector">
+                <div class="select red" ></div>
+                <div class="select green" ></div>
+                <div class="select yellow" ></div>
+                <div class="select blue" ></div>
+                <div class="select orange" ></div>
+                <div class="select pink" ></div>
+            </div>
+            <div class="group-btn">
+                <button disabled id="check" class="btn reset-game">CHECK</button>
+                <button id="restart" class="btn red">reset</button>
+            </div>
+        </section>
+        
     </div>
-    <section class="container">
-        <div class="mainSelector">
-            <div class="select red" ></div>
-            <div class="select green" ></div>
-            <div class="select yellow" ></div>
-            <div class="select blue" ></div>
-            <div class="select orange" ></div>
-            <div class="select pink" ></div>
-        </div>
-    </section>
-    <button id="check" class="btn red" disabled>CHECK</button>
     <div class="androidSelector">
         <div class="select" ></div>
         <div class="select" ></div>
