@@ -11,7 +11,7 @@ const JUEGO = {
 let { COLORLIST, randomColors, ColorUser, line, cell } = JUEGO
 
 const DOM = {
-  check: function () { return document.querySelector('#check') },
+  check: function () { return document.querySelector('#check')},
   resetRound: function () { return document.querySelector('#restart') },
   exitButton: function () { return document.querySelector('#exit-button') },
   checkbox: function () { return document.querySelectorAll('.result div ') },
