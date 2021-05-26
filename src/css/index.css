@@ -119,34 +119,40 @@ section div{
 
 
 .red{
+    transition: all 1s;
     background-color: rgba(255, 0, 0, 0.733);
     
 
 }
 
 .green{
+    transition: all 1s;
     background-color: green;
 }
 
 .yellow{
+    transition: all 1s;
     background-color: yellow
 }
 .blue{
-
+    transition: all 1s;
     background-color: blue
 }
 .orange{
-
+    transition: all 1s;
     background-color: orange
 }
 .pink{
+    transition: all 1s;
     background-color: pink;
 }
 
 .black{
+    transition: all 1s;
     background-color: black;
 }
 .grey{
+    transition: all 1s;
     background-color: grey;
 }
 .white{
@@ -175,7 +181,7 @@ section div{
 .reset-game {
     background-color: cyan;
 }
-.modal { 
+.modal, .modal2 { 
   position: fixed;
   top: 0;
   left: 0;
@@ -185,7 +191,6 @@ section div{
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: var(--black);
   cursor: pointer;
   transition: all 0.35s ease-in;
   background-color: rgba(0, 0, 0, 0.500);
@@ -194,16 +199,39 @@ section div{
 
 }
 
-.modal-dialog {
+.you-win {
   position: relative;
   max-width: 800px;
   max-height: 80vh;
   border-radius: 5px;
-  background-image: url(/assets/you-win.jpg)
+  background-image: url(/assets/you-win.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: auto;
   cursor: default;
   z-index: 100;
-  color: white;
+  color: rgb(255, 0, 43);
+  padding: 100px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  border: 3px dotted white;
+  
+}
+
+.you-lose {
+  position: relative;
+  max-width: 800px;
+  max-height: 80vh;
+  border-radius: 5px;
+  background-image: url(/assets/loser.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: auto;
+  cursor: default;
+  z-index: 100;
+  color: rgb(255, 0, 43);
   padding: 100px;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
@@ -215,7 +243,16 @@ section div{
     display: flex;
 }
 
-#exit-button {
+#exit-button-win {
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px;
+    background-color: rgb(145, 10, 10);
+    color: white;
+    border: 1px solid white;
+}
+
+#exit-button-lose {
     border-radius: 10px;
     font-family: 'Press Start 2P', cursive;
     padding: 5px;

@@ -7,7 +7,9 @@ const select = document.querySelectorAll('.select')
 
 const resetRound = document.querySelector('#restart')
 
-const exitButton = document.querySelector('#exit-button')
+const exitButtonWin = document.querySelector('#exit-button-win')
+
+const exitButtonLose = document.querySelector('#exit-button-lose')
 
 // We define 2 variable
 // Cell indicates the value of the first position, within the first try.
@@ -17,7 +19,7 @@ let line = 1
 
 // function that "paints" each cell, inside within its line.
 const paint = function (event) {
-// if (true), we select each class slot (that equals to each cell of the table). With each slot being a child of each row(with line position). This will return an array.
+  // if (true), we select each class slot (that equals to each cell of the table). With each slot being a child of each row(with line position). This will return an array.
   // Then slot[cell position] adds a class to the event.target (returns HTML tag that was clicked), and adds the second class form tag. Then we increase cell by 1.
 
   if (line <= 12) {
@@ -29,7 +31,7 @@ const paint = function (event) {
     cell++
 
     // if every cell is completed, we jump to the next line
-
+    
     if ((slots.length) === cell) {
       cell = 0
       line++
@@ -40,7 +42,8 @@ const paint = function (event) {
     }
   } else {
     resetGame()
-    window.alert('You have lost mate, maybe another round?')
+    const appearLose = document.querySelector('#modal2')
+    appearLose.classList.add('appear')
   }
 }
 
@@ -87,7 +90,10 @@ const compare = function () {
 
   if (hasWon) {
     resetGame()
-  }
+  } else if (line === 12 && cell === 4){
+     console.log('perdi')
+    }
+  
 
   ColorUser = []
 
@@ -97,12 +103,13 @@ const compare = function () {
   })
 
   if (hasWon === true) {
-    const appear = document.querySelector('.modal')
-    appear.classList.add('appear')
+    const appearWin = document.querySelector('#modal1')
+    appearWin.classList.add('appear')
   }
 }
 
-function resetGame () {
+function resetGame
+() {
   const slots = document.querySelectorAll('.slot')
   const checkbox = document.querySelectorAll('.result div ')
   setTimeout(function () {
@@ -122,8 +129,13 @@ select.forEach(function (element) {
   element.addEventListener('click', paint)
 })
 
-exitButton.addEventListener('click', function () {
+exitButtonWin.addEventListener('click', function () {
   const appear = document.getElementById('modal1')
+  appear.classList.remove('appear')
+})
+
+exitButtonLose.addEventListener('click', function () {
+  const appear = document.getElementById('modal2')
   appear.classList.remove('appear')
 })
 
