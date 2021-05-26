@@ -21,7 +21,7 @@ const paint = function (event) {
   // Then slot[cell position] adds a class to the event.target (returns HTML tag that was clicked), and adds the second class form tag. Then we increase cell by 1.
 
   if (line <= 12) {
-    const slots = document.querySelectorAll(`.row${line}>.slot`)
+    const slots = document.querySelectorAll(`section.row${line} > .slot`)
 
     ColorUser.push(event.target.classList[1])
 
@@ -84,7 +84,10 @@ const compare = function () {
   const hasWon = test2.every(function (item) {
     return item === 'black'
   })
+<<<<<<< HEAD
 
+=======
+>>>>>>> vista
   if (hasWon) {
     resetGame()
   }
