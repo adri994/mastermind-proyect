@@ -18,7 +18,7 @@ const DOM = {
   androidSlot: function () { return document.querySelectorAll('.androidSelector  img') },
   compareSlot: function () { return document.querySelectorAll(`section.checkbox${line} > div`) },
   slots: function () { return document.querySelectorAll(`section.row${line}  img`) },
-  player: function () { return document.querySelectorAll('.mainSelector img') }
+  player: function () { return document.querySelectorAll('.mainSelector img')}
 }
 const { check, resetRound, exitButton, checkbox, androidSlot, compareSlot, slots, player } = DOM
 
