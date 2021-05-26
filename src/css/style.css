@@ -1,68 +1,76 @@
-
-
-
-main{
+body {
+    margin: 0;
+    background-image: url(/assets/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  
+  }
+  .primary-box{
     display: flex;
-    gap: 2rem;
-}
-
-section{
+    justify-content: space-between;
+    flex-direction: column;
+    height: 60%;
+    align-items: center;
+    font-family: 'Press Start 2P';
+  }
+  
+  .secondary-box {
     display: flex;
-}
-
-section div{
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.mainSelector, .androidSelector{
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 40%;
+  }
+  
+  .title {
+    color: red;
+    text-shadow: 2px 2px white;
+    font-size: 64px;
+    padding: 20px;
+    margin: auto;
+    /* border-bottom: 5px solid red; */
+  }
+  
+  .subtitle {
+    color: black;
+    text-shadow: 2px 2px white;
+    text-indent: 500px;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+  
+  .start {margin-bottom: 50px;
+  cursor: pointer;}
+  
+  .introduction {margin-top: 50px;}
+  
+  .character-box {
+    margin: 0px 0px 20px 20px;
+  
+  }
+  
+  .users {
+    font-family: 'Press Start 2P';
+    font-size: 15px;
     display: flex;
-    gap: 1rem;
-
-}
-
-.select{
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-
-
-.red{
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 20px 20px 0px;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .users-title{
     background-color: red;
-
-}
-
-.green{
-    width: 50px;
-    height: 50px;
-    background-color: green;
-}
-
-.yellow{
-    background-color: yellow
-}
-.blue{
-
-    background-color: blue
-}
-.orange{
-
-    background-color: orange
-}
-.pink{
-    background-color: pink;
-}
-
-.black{
-    background-color: black;
-}
-.grey{
-    background-color: grey;
-}
-.white{
-    background-color: whitesmoke;
-}
+    color: white;
+  }

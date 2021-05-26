@@ -11,21 +11,21 @@ const JUEGO = {
 let { COLORLIST, randomColors, ColorUser, line, cell } = JUEGO
 
 const DOM = {
-  check: function () { return document.querySelector('#check')},
+  check: function () { return document.querySelector('#check') },
   resetRound: function () { return document.querySelector('#restart') },
-  exitButton: function () { return document.querySelector('#exit-button') },
   checkbox: function () { return document.querySelectorAll('.result div ') },
   androidSlot: function () { return document.querySelectorAll('.androidSelector  img') },
   compareSlot: function () { return document.querySelectorAll(`section.checkbox${line} > div`) },
   slots: function () { return document.querySelectorAll(`section.row${line}  img`) },
-  player: function () { return document.querySelectorAll('.mainSelector img')}
+  player: function () { return document.querySelectorAll('.mainSelector img') },
+  exitButtonLose: function (){ return document.querySelector('#exit-button-lose') },
+  exitButtonWin: function (){ return document.querySelector('#exit-button-win') }
 }
-const { check, resetRound, exitButton, checkbox, androidSlot, compareSlot, slots, player } = DOM
+const { check, resetRound, checkbox, androidSlot, compareSlot, slots, player, exitButtonWin, exitButtonLose } = DOM
 
 // Function
 
 const paint = function (event) {
-  console.log(event)
   if (line <= 12) {
     colorCell(event)
     if ((slots().length) === cell) {
@@ -73,7 +73,8 @@ const compare = function () {
     const appear = document.querySelector('.modal')
     appear.classList.add('appear')
   } else if (line > 12 && cell === 0) {
-    alert('perdiste')
+    const appearLose = document.querySelector('#modal2')
+    appearLose.classList.add('appear')
   }
 }
 
@@ -106,8 +107,8 @@ function resetGame () {
     cell = 0
   }, 1000)
   for (let i = 0; i < slots().length; i++) {
-    slots()[i].classList.replace(slots()[i].classList[1], 'white')
-    checkbox()[i].classList.replace(checkbox()[i].classList[0], 'white')
+    slots()[i].src = './assets/white.png'
+    checkbox()[i].src = './assets/white.png'
   }
 }
 
@@ -131,14 +132,20 @@ const mainSelect = function () {
 }
 // Evento
 
-exitButton().addEventListener('click', function () {
+player().forEach(function (element) {
+  element.addEventListener('click', paint)
+})
+
+exitButtonWin().addEventListener('click', function () {
   const appear = document.getElementById('modal1')
   appear.classList.remove('appear')
 })
 
-player().forEach(function (element) {
-  element.addEventListener('click', paint)
+exitButtonLose().addEventListener('click', function () {
+  const appear = document.getElementById('modal2')
+  appear.classList.remove('appear')
 })
+
 resetRound().addEventListener('click', resetGame)
 check().addEventListener('click', compare)
 

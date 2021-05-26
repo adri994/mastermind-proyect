@@ -18,7 +18,7 @@ h1{
 }
 
 body{
-    background: #bdc3c7;
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     font-family: 'Press Start 2P', cursive;
 
 }
@@ -115,26 +115,31 @@ section div{
 
 
 .btn{
-    height: 2rem;
     border: none;
     padding: 1.5rem;
     color: #fff;
+    border-radius: 50%;
     text-transform: uppercase;
     font-weight: 900;
-    width: 11rem;
-    height: 5rem;
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
 }
 
-.androidSelector{
 
-}
 
 .group-btn{
     width: 100%;
 }
 
 .reset-game {
-    background-color: cyan;
+    background-image: url(../../assets/restart-button.png);
+    background-size: cover;
+}
+
+.check{
+    background-image: url(../../assets/check-button.png);
+    background-size: cover;
 }
 .modal { 
   position: fixed;
@@ -199,3 +204,92 @@ section div{
     padding: 5px;
     background-color: rgb(192, 192, 192);
 }
+
+.modal, .modal2 { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.35s ease-in;
+    background-color: rgba(0, 0, 0, 0.500);
+   
+    
+  
+  }
+  
+  .you-win {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background-image: url(../../assets/you-win.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    cursor: default;
+    z-index: 100;
+    color: rgb(255, 0, 43);
+    padding: 100px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: 3px dotted white;
+    
+  }
+  
+  .you-lose {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background-image: url(../../assets/loser.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    cursor: default;
+    z-index: 100;
+    color: rgb(255, 0, 43);
+    padding: 100px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: 3px dotted white;
+    
+  }
+  
+  .appear {
+      display: flex;
+  }
+  
+  #exit-button-win {
+      border-radius: 10px;
+      font-family: 'Press Start 2P', cursive;
+      padding: 5px;
+      background-color: rgb(145, 10, 10);
+      color: white;
+      border: 1px solid white;
+  }
+  
+  #exit-button-lose {
+      border-radius: 10px;
+      font-family: 'Press Start 2P', cursive;
+      padding: 5px;
+      background-color: rgb(145, 10, 10);
+      color: white;
+      border: 1px solid white;
+  }
+  
+  #level-button {
+      border-radius: 10px;
+      font-family: 'Press Start 2P', cursive;
+      padding: 5px;
+      background-color: rgb(192, 192, 192);
+  }
+
+  
