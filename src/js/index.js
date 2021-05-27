@@ -17,11 +17,13 @@ const DOM = {
   androidSlot: function () { return document.querySelectorAll('.androidSelector  img') },
   compareSlot: function () { return document.querySelectorAll(`section.checkbox${line} > div`) },
   slots: function () { return document.querySelectorAll(`section.row${line}  img`) },
+  allSlot: function () { return document.querySelectorAll('[class^="row"]  img') },
+  allCheck: function () { return document.querySelectorAll('[class^="checkbox"]  div') },
   player: function () { return document.querySelectorAll('.mainSelector img') },
   exitButtonLose: function (){ return document.querySelector('#exit-button-lose') },
   exitButtonWin: function (){ return document.querySelector('#exit-button-win') }
 }
-const { check, resetRound, checkbox, androidSlot, compareSlot, slots, player, exitButtonWin, exitButtonLose } = DOM
+const { check, resetRound, androidSlot, compareSlot, slots, player, exitButtonWin, exitButtonLose, allSlot, allCheck } = DOM
 
 // Function
 
@@ -33,7 +35,6 @@ const paint = function (event) {
     }
   } else {
     resetGame()
-    window.alert('You have lost mate, maybe another round?')
   }
 }
 
@@ -70,7 +71,7 @@ const compare = function () {
   })
 
   if (hasWon === true) {
-    const appear = document.querySelector('.modal')
+    const appear = document.querySelector('#modal1')
     appear.classList.add('appear')
   } else if (line > 12 && cell === 0) {
     const appearLose = document.querySelector('#modal2')
@@ -106,10 +107,13 @@ function resetGame () {
     ColorUser = []
     cell = 0
   }, 1000)
-  for (let i = 0; i < slots().length; i++) {
-    slots()[i].src = './assets/white.png'
-    checkbox()[i].src = './assets/white.png'
+  for (let i = 0; i < allSlot().length; i++) {
+    allSlot()[i].src = './assets/white.png'
+    allCheck()[i].classList.replace(allCheck()[i].classList[0], 'white')
   }
+  player().forEach(function (element) {
+    element.addEventListener('click', paint)
+  })
 }
 
 const androidSelector = function () {
