@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    background-image: url(/assets/background-image.jpg);
+    background-image: url(../../assets/background-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
-  
+
   }
   .primary-box{
     display: flex;
@@ -15,23 +15,22 @@ body {
     align-items: center;
     font-family: 'Press Start 2P';
   }
-  
+
   .secondary-box {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     height: 40%;
   }
-  
+
   .title {
     color: red;
     text-shadow: 2px 2px white;
     font-size: 64px;
     padding: 20px;
     margin: auto;
-    /* border-bottom: 5px solid red; */
   }
-  
+
   .subtitle {
     color: black;
     text-shadow: 2px 2px white;
@@ -39,38 +38,64 @@ body {
     margin-top: 10px;
     font-weight: 700;
   }
-  
+
   .start {margin-bottom: 50px;
   cursor: pointer;}
-  
+
   .introduction {margin-top: 50px;}
-  
+
   .character-box {
     margin: 0px 0px 20px 20px;
-  
+
   }
-  
+
   .users {
+    display: flex;
     font-family: 'Press Start 2P';
     font-size: 15px;
-    display: flex;
-    bottom: 20px;
-    right: 20px;
     width: 400px;
     height: 300px;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0px 20px 20px 0px;
-    align-items: center;
+    align-items: flex-start;
     padding: 5px;
+    font-weight: 700;
   }
-  
+
+  .users-title{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    box-shadow: -9px -6px 11px -5px #000000;
+    border-radius: 5px;
+
+  }
   a {
     text-decoration: none;
     color: white;
   }
-  
-  .users-title{
-    background-color: red;
-    color: white;
+
+  .users-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+
+  .fa-github {
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .fa-linkedin {
+    color: #FFFFFF;
+    background-color: #2867B2;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  #enemy-image {
+    width: 300px;
+    height: 300px;
   }
