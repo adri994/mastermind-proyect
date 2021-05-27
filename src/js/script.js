@@ -84,6 +84,10 @@ const compare = function () {
   const hasWon = test2.every(function (item) {
     return item === 'black'
   })
+<<<<<<< HEAD
+
+=======
+>>>>>>> vista
   if (hasWon) {
     resetGame()
   }

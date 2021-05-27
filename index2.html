@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preload" href="./src/css/index.css" as="style">
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="preload" href="./assets/loser.jpg" as="image">
+    <link rel="preload" href="./assets/you-win.jpg" as="image">
+
+
+    
     <script defer src="./src/js/index.js"></script>
     <title>Mastermind</title>
 </head>
@@ -14,7 +20,7 @@
 
     <div class="full">
         <div class="title">
-            <h1>Mastermind</h1>
+            <h1 class="Title">Mastermind</h1>
         </div>
         <main>
             <div class="option">
@@ -198,21 +204,25 @@
                 <div class="slot" > <img src="" alt=""></div>
                 <div class="slot" > <img src="" alt=""></div>
                 <div class="slot" > <img src="" alt=""></div>
+                <div class="slot" > <img src="" alt=""></div>
+                <div class="slot" > <img src="" alt=""></div>
+                
             </div>
             <div class="group-btn">
                 <button disabled id="check" class="btn check"></button>
                 <button id="restart" class="btn reset-game"></button>
             </div>
+            <div class="androidSelector">
+                <div> <img src="" alt=""></div>
+                <div> <img src="" alt=""></div>
+                <div> <img src="" alt=""></div>
+                <div > <img src="" alt=""></div>
+                <div> <img src="" alt=""></div>
+            </div>
         </section>
         
     </div>
-    <div class="androidSelector">
-        <div> <img src="" alt=""></div>
-        <div> <img src="" alt=""></div>
-        <div> <img src="" alt=""></div>
-        <div > <img src="" alt=""></div>
-        <div> <img src="" alt=""></div>
-    </div>
+
     <div class="modal"  id="modal1">
         <div class="you-win">
           <p>
@@ -230,6 +240,10 @@
           </p>
           <button id="exit-button-lose">EXIT</button>
         </div>
-      </div> 
+      </div>
+      <audio id="audio-slot" src="/assets/sound/put-slot.mp3"></audio>
+      <audio id="wrong-selection-audio" src="/assets/sound/incorrect-selection.mp3"></audio>
+      <audio id="winner-selection" src="/assets/sound/winner-selection.mp3"></audio>
+      <audio id="loser-sound" src="/assets/sound/loser-sound.mp3"></audio> 
 </body>
-</html><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</html>

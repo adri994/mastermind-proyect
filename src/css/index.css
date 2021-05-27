@@ -13,13 +13,16 @@ h1{
     font-size: 900;
     font-size: 4rem;
     letter-spacing: .2rem;
-    color: white;
-    transform: rotate(90deg) translate(20px,-280px);
-    background-color: red;
-    padding: 2rem;
+
  
 }
 
+.title{
+    color: white;
+    transform: rotate(90deg) translate(20px,-255px);
+    background-color: red;
+    padding: 1.5rem;
+}
 body{
     background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     font-family: 'Press Start 2P', cursive;
@@ -77,7 +80,7 @@ section div{
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    height: auto;
+    height: 80rem
 
 }
 
@@ -89,7 +92,7 @@ section div{
 
 .mainSelector{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 1rem;
     height: auto;
     margin-left: 3rem;
@@ -97,7 +100,15 @@ section div{
 }
 
 .androidSelector{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    width: 100%;
+}
 
+.androidSelector div{
+    height: 5rem;
+    width: 5rem;
 }
 
 [class^="row"]{
@@ -136,7 +147,8 @@ section div{
 
 .group-btn{
     width: 100%;
-    margin-left: 2rem;
+    margin-left: 5rem;
+    height: auto;
 }
 
 .reset-game {
@@ -180,7 +192,7 @@ section div{
   max-width: 800px;
   max-height: 80vh;
   border-radius: 5px;
-  background: black;
+  background-image: image();
   overflow: auto;
   cursor: default;
   z-index: 100;
