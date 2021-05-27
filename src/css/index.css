@@ -13,10 +13,16 @@ h1{
     font-size: 900;
     font-size: 4rem;
     letter-spacing: .2rem;
-    transform: translate();
+
  
 }
 
+.title{
+    color: white;
+    transform: rotate(90deg) translate(20px,-255px);
+    background-color: red;
+    padding: 1.5rem;
+}
 body{
     background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     font-family: 'Press Start 2P', cursive;
@@ -25,6 +31,7 @@ body{
 
 .full{
     width: 90%;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +80,7 @@ section div{
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    height: auto;
+    height: 80rem
 
 }
 
@@ -85,11 +92,23 @@ section div{
 
 .mainSelector{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 1rem;
     height: auto;
     margin-left: 3rem;
     margin-bottom: 1rem;
+}
+
+.androidSelector{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    width: 100%;
+}
+
+.androidSelector div{
+    height: 5rem;
+    width: 5rem;
 }
 
 [class^="row"]{
@@ -126,10 +145,10 @@ section div{
     cursor: pointer;
 }
 
-
-
 .group-btn{
     width: 100%;
+    margin-left: 5rem;
+    height: auto;
 }
 
 .reset-game {
@@ -217,10 +236,7 @@ section div{
     padding: 1rem;
     cursor: pointer;
     transition: all 0.35s ease-in;
-    background-color: rgba(0, 0, 0, 0.500);
-   
-    
-  
+    background-color: rgba(0, 0, 0, 0.500);  
   }
   
   .you-win {
