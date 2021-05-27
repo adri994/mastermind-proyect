@@ -13,7 +13,10 @@ h1{
     font-size: 900;
     font-size: 4rem;
     letter-spacing: .2rem;
-    transform: translate();
+    color: white;
+    transform: rotate(90deg) translate(20px,-280px);
+    background-color: red;
+    padding: 2rem;
  
 }
 
@@ -25,6 +28,7 @@ body{
 
 .full{
     width: 90%;
+    height: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,6 +96,10 @@ section div{
     margin-bottom: 1rem;
 }
 
+.androidSelector{
+
+}
+
 [class^="row"]{
     margin: 1rem 0;
     height: 5.2rem;
@@ -126,10 +134,9 @@ section div{
     cursor: pointer;
 }
 
-
-
 .group-btn{
     width: 100%;
+    margin-left: 2rem;
 }
 
 .reset-game {
@@ -217,10 +224,7 @@ section div{
     padding: 1rem;
     cursor: pointer;
     transition: all 0.35s ease-in;
-    background-color: rgba(0, 0, 0, 0.500);
-   
-    
-  
+    background-color: rgba(0, 0, 0, 0.500);  
   }
   
   .you-win {

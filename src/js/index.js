@@ -35,7 +35,6 @@ const paint = function (event) {
     }
   } else {
     resetGame()
-    window.alert('You have lost mate, maybe another round?')
   }
 }
 
