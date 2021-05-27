@@ -1,7 +1,7 @@
 // VARIABLES
 
 const JUEGO = {
-  COLORLIST: ['red', 'blue', 'green', 'brown', 'purple', 'pink','greys','cyan'],
+  COLORLIST: ['red', 'blue', 'green', 'brown', 'purple', 'pink','greys', 'cyan'],
   randomColors: [],
   ColorUser: [],
   cell: 0,
