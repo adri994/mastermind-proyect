@@ -278,8 +278,29 @@ section div{
     border: 3px dotted white;
     
   }
-  
-  .appear {
+
+  .instructions {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background-image: url(/assets/instructions-modal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    cursor: default;
+    z-index: 100;
+    color: white;
+    padding: 100px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    border: 3px dotted white;
+    font-size: 24px;
+    line-height: 4rem;
+  }
+ 
+    .appear {
       display: flex;
   }
   
@@ -293,6 +314,15 @@ section div{
   }
   
   #exit-button-lose {
+      border-radius: 10px;
+      font-family: 'Press Start 2P', cursive;
+      padding: 5px;
+      background-color: rgb(145, 10, 10);
+      color: white;
+      border: 1px solid white;
+  }
+
+  #exit-button-instructions {
       border-radius: 10px;
       font-family: 'Press Start 2P', cursive;
       padding: 5px;
