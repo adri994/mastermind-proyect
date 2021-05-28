@@ -162,7 +162,7 @@ section div{
 }
 
 .instructions-btn {
-    background-image: url(/assets/how-to-play.png);
+    background-image: url(../../assets/how-to-play.png);
     background-size: cover;
     border-radius: 50%;
     margin-left: 45px;
@@ -293,7 +293,7 @@ section div{
     max-width: 800px;
     max-height: 80vh;
     border-radius: 5px;
-    background-image: url(/assets/instructions-modal.png);
+    background-image: url(../../assets/instructions-modal.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
