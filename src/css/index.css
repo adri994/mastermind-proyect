@@ -160,6 +160,15 @@ section div{
     background-image: url(../../assets/check-button.png);
     background-size: cover;
 }
+
+.instructions-btn {
+    background-image: url(/assets/how-to-play.png);
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 45px;
+    margin-top: 15px;
+}
+
 .modal { 
   position: fixed;
   top: 0;

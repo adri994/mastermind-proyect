@@ -25,10 +25,13 @@ const DOM = {
   audioSlot: function () { return document.querySelector('#audio-slot') },
   audioWrong: function () { return document.querySelector('#wrong-selection-audio') },
   winnerSelection: function () { return document.querySelector('#winner-selection') },
-  loserAudio: function () { return document.querySelector('#loser-sound') }
+  loserAudio: function () { return document.querySelector('#loser-sound') },
+  instructionsGameButton: function () { return document.querySelector('#instructions-button') },
+  exitButtonInstructions: function () { return document.querySelector('#exit-button-instructions') }
+
 
 }
-const { check, resetRound, androidSlot, compareSlot, slots, player, exitButtonWin, exitButtonLose, allSlot, allCheck, audioSlot, audioWrong, winnerSelection, loserAudio } = DOM
+const { check, resetRound, androidSlot, compareSlot, slots, player, exitButtonWin, exitButtonLose, allSlot, allCheck, audioSlot, audioWrong, winnerSelection, loserAudio, instructionsGameButton, exitButtonInstructions } = DOM
 
 // Function
 
@@ -170,6 +173,16 @@ exitButtonLose().addEventListener('click', function () {
   const appear = document.getElementById('modal2')
   appear.classList.remove('appear')
   showResult()
+})
+
+instructionsGameButton().addEventListener('click', function () {
+  const appear = document.getElementById('modal3')
+  appear.classList.add('appear')
+})
+
+exitButtonInstructions().addEventListener('click', function () {
+  const appear = document.getElementById('modal3')
+  appear.classList.remove('appear')
 })
 
 resetRound().addEventListener('click', resetGame)
