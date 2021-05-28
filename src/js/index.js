@@ -80,10 +80,13 @@ const compare = function () {
     winnerSelection().play()
     const appear = document.querySelector('#modal1')
     appear.classList.add('appear')
-  } else if (line > 12 && cell === 0) {
+  } else if (line > 5 && cell === 0) {
     loserAudio().play()
     const appearLose = document.querySelector('#modal2')
     appearLose.classList.add('appear')
+    player().forEach(function (button) {
+      button.removeEventListener('click', paint)
+    })
   } else if (!hasWon) {
     audioWrong().play()
   }
@@ -128,17 +131,16 @@ function resetGame () {
 }
 
 const androidSelector = function () {
-  randomColors = []
-  while (randomColors.length < 5) {
-    const randomChoice = Math.floor(Math.random() * (COLORLIST.length))
-    if (!randomColors.includes(COLORLIST[randomChoice])) {
-      randomColors.push(COLORLIST[randomChoice])
-    }
-  }
+  randomColors = ['red', 'blue', 'green', 'brown', 'purple']
+  // while (randomColors.length < 5) {
+  //   const randomChoice = Math.floor(Math.random() * (COLORLIST.length))
+  //   if (!randomColors.includes(COLORLIST[randomChoice])) {
+  //     randomColors.push(COLORLIST[randomChoice])
+  //   }
+  // }
   androidSlot().forEach(function (element, i) {
     element.src = './assets/random.png'
   })
-  console.log(randomColors)
 }
 
 const mainSelect = function () {
